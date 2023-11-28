@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techmed Company</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <script src="./src/js/scripts.js"></script>
+    <!-- Navbar -->
+    <header>
+        <a href="" class="logo">Tech<span>med</span></a>
+        <div class="navbar-icon" onclick="toggleNavbar()">
+            <i class='bx bx-menu'></i>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <div class="navbar-mobile" id="navbarMobile">
+            <a href="index.html">Inicio</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+        </div>
+    </header>
+    <!-- Navbar END -->
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <span>Seja bem vindo(a) à</span>
+            <h1>Techmed</h1>
+            <h2>O futuro da saúde mundial</h2>
+            <p>Uma solução inovadora que visa revolucionar o acesso aos serviços de saúde em todo o país, concentrando-se na integração de tecnologias emergentes para fornecer telessaúde eficiente e de alta qualidade. Esta solução busca diminuir as barreiras de acesso aos cuidados de saúde, especialmente em regiões remotas e desatendidas.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+    </section>
+    <!-- Home Section END-->
+    <script>
+        function typeWrite(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+            setTimeout(() => elemento.innerHTML += letra, 50 * i)
+            });
+        }
+
+        const texto = document.querySelector('h2')
+        typeWrite(texto);
+    </script>
+</body>
+</html>
