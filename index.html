@@ -6,10 +6,12 @@
     <title>Techmed Company</title>
     <link rel="stylesheet" href="./src/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <script src="./src/js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Navbar -->
     <header>
         <a href="" class="logo">Tech<span>med</span></a>
@@ -33,12 +35,12 @@
 
     <!-- Home Section -->
     <section class="home" id="home">
-        <div class="home-text">
+        <div class="home-text" data-aos="fade-up" data-aos-delay="100">
             <span>Seja bem vindo(a) à</span>
             <h1>Techmed</h1>
-            <h2>O futuro da saúde mundial</h2>
+            <h2 id="type">O futuro da saúde mundial</h2>
             <p>Uma solução inovadora que visa revolucionar o acesso aos serviços de saúde em todo o país, concentrando-se na integração de tecnologias emergentes para fornecer telessaúde eficiente e de alta qualidade. Esta solução busca diminuir as barreiras de acesso aos cuidados de saúde, especialmente em regiões remotas e desatendidas.</p>
-            <a href="#" class="btn">Saiba mais</a>
+            <a href="sobre.html" class="btn">Saiba mais</a>
         </div>
     </section>
     <!-- Home Section END-->
@@ -51,8 +53,16 @@
             });
         }
 
-        const texto = document.querySelector('h2')
+        const texto = document.querySelector('#type')
         typeWrite(texto);
     </script>
 </body>
+<footer>
+    <div class="footer">
+       <p>João Santos <span>[RM554328]</span> | Willian Oliveira <span>[RM552671]</span></p>
+    </div>
+    <div class="mobile-footer">
+        <span>[RM554328]</span> | <span>[RM552671]</span></p>
+     </div>
+</footer>
 </html>
