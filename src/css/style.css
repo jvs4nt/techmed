@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&family=Poppins:wght@300;400;500;600;700;800&family=Roboto&display=swap');
 
+/* GLOBAL SETTINGS */
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +37,10 @@ body {
     background-color: var(--bg-color);
     color: var(--bg-color);
 }
+
+/* GLOBAL SETTINGS END */
+
+/* header */
 
 header {
     position: fixed;
@@ -121,11 +126,14 @@ header {
 
 }
 
+/* header end */
+
+/* home */
 
 .home {
     position: static;
     width: 100%;
-    height: 97vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -161,7 +169,7 @@ font-weight: 500;
     font-weight: 400;
     margin: 0.7rem 0 1rem;
 }
-.social {
+/* .social {
     display: flex;
     flex-direction: column;
 }
@@ -173,7 +181,7 @@ font-weight: 500;
 }
 .social a:hover {
     color: var(--hover);
-}
+} */
 .btn {
     display: inline-block;
     background: var(--main-color);
@@ -185,11 +193,15 @@ font-weight: 500;
     background: var(--hover);
 }
 
+/* home end */
+
+/* footer */
+
 footer {
-    position: fixed;
+    position: relative;
     display: flex;
     background-color: var(--bg-color);
-    height: 3vh;
+    height: 6vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
@@ -217,3 +229,5 @@ footer p span {
         display: none;
     }
 }
+
+/* footer end */
