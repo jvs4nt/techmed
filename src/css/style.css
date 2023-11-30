@@ -219,6 +219,7 @@ font-weight: 500;
 
 .sobre-text {
     width: 100vw;
+    margin-top: 5%;
     position: static;
 }
 
@@ -347,6 +348,7 @@ footer p span {
     background-color: var(--bg-color);
     background-position: center;
     transition: 0.2s;
+    padding: 20px;
 }
 
 .equipe-screen {
@@ -374,7 +376,7 @@ footer p span {
     border-radius: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 968px) {
     .imagem img {
         width: 80px;
         margin-top: 10px;
