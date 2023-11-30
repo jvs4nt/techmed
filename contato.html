@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techmed Company</title>
+    <title>Contato</title>
     <link rel="stylesheet" href="./src/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <script src="./src/js/scripts.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Navbar -->
     <header>
         <a href="index.html" class="logo">Tech<span>med</span></a>
@@ -32,29 +31,17 @@
     </header>
     <!-- Navbar END -->
 
-    <!-- Home Section -->
+    <!-- Contact Section -->
     <section class="home" id="home">
-        <div class="home-text">
-            <span>Seja bem vindo(a) à</span>
-            <h1>Techmed</h1>
-            <h2 id="type">O futuro da saúde mundial</h2>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uma solução inovadora que visa revolucionar o acesso aos serviços de saúde em todo o país, concentrando-se na integração de tecnologias emergentes para fornecer telessaúde eficiente e de alta qualidade. Esta solução busca diminuir as barreiras de acesso aos cuidados de saúde, especialmente em regiões remotas e desatendidas.</p>
-            <a href="sobre.html" class="btn">Saiba mais</a>
-        </div>
+        <form class="form">
+            <h2>CONTATO</h2>
+            <p type="Nome:"><input placeholder="digite seu nome aqui"></input></p>
+            <p type="Email:"><input placeholder="digite seu email aqui"></input></p>
+            <p type="Mensagem:"><input placeholder="escreva a sua mensagem para nós"></input></p>
+            <button>Enviar</button>
+          </form>
     </section>
-    <!-- Home Section END-->
-    <script>
-        function typeWrite(elemento) {
-            const textoArray = elemento.innerHTML.split('');
-            elemento.innerHTML = '';
-            textoArray.forEach((letra, i) => {
-            setTimeout(() => elemento.innerHTML += letra, 50 * i)
-            });
-        }
-
-        const texto = document.querySelector('#type')
-        typeWrite(texto);
-    </script>
+    <!-- Contact Section END-->
 </body>
 <footer>
     <div class="footer">
