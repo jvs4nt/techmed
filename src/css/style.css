@@ -57,7 +57,8 @@ header {
     background: var(--bg-color);
     padding: 13px 10%;
     transition: 0.2s;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--hover);
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); */
     z-index: 1000;
 }
 
@@ -185,11 +186,12 @@ font-weight: 500;
 } */
 .btn {
     display: inline-block;
+    border-radius: 8px;
     background: var(--hover);
     color: #fff;
     padding: 0.7rem 1.3rem;
     border: 0.6rem;
-    
+    transition: all .3s;
 }
 
 .btn:hover {
@@ -256,12 +258,18 @@ font-weight: 500;
 }
 
 .btn-sobre {
+    border-radius: 8px;
     display: inline-block;
     background: var(--hover);
     color: #fff;
     padding: 0.7rem 1.3rem;
     border: 0.6rem;
+    transition: all .3s;
     
+}
+
+.btn-sobre:hover {
+    background: var(--main-color);
 }
 
 @media only screen and (max-width: 700px) {
@@ -287,6 +295,7 @@ footer {
     position: fixed;
     display: flex;
     background-color: var(--bg-color);
+    border-top: 2px solid #7fd3c2;
     height: 6vh;
     width: 100vw;
     justify-content: center;
@@ -324,6 +333,11 @@ footer p span {
     EQUIPE
    ======== */
 
+   .body-equipe {
+    background-image: none;
+    background-color: #fff;
+   }
+
    .box-equipe {
     position:relative;
     min-height: 100vh;
@@ -342,15 +356,13 @@ footer p span {
 
 .equipe {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border-bottom: 1px solid #cccccc; */
-    box-shadow: 5px 5px 10px rgba(0, 104, 231, 0.3);
+    margin: 0 auto;
+    border: 2px solid #7fd3c2;
+    /* box-shadow: 5px 5px 10px rgba(0, 104, 231, 0.3); */
     /* margin: 10px; */
-    width: 50%;
+    border-radius: 20px;
+    width: 300px;
     background-color: var(--bg-color);
-    background-position: center;
     transition: 0.2s;
     padding: 20px;
 }
@@ -358,7 +370,6 @@ footer p span {
 .equipe-screen {
     width: 70vw;
     display: flex;
-    gap: 10px;
     
 }
 
@@ -424,12 +435,17 @@ footer p span {
 
    /* form section */
 
+   .body-contato {
+    background-image: none;
+    background-color: #fff;
+   }
+
    .form {
         width:80%;
-        background:#e6e6e6;
+        background: var(--bg-color);
         border-radius:8px;
         box-shadow:0 0 40px -10px #000;
-        margin:calc(50vh - 220px) auto;
+        margin:0 auto;
         padding:20px 30px;
         box-sizing:border-box;
         
@@ -448,6 +464,7 @@ footer p span {
 
     .form input {
         width:100%;
+        margin-bottom: 20px;
         padding:10px;
         box-sizing:border-box;
         background:none;
@@ -476,11 +493,14 @@ footer p span {
     }
 
     .form button {
-        width: 60px;
+        width: 100px;
+        height: 45px;
         padding:8px 12px;
         margin-top: 20px;
-        font-family:'Montserrat',sans-serif;
-        border:2px solid var(--main-color);
+        font-size: 18px;
+        font-family:'Poppins',sans-serif;
+        border: none;
+        border-radius: 8px;
         background-color: var(--text-color);
         color:#fff;
         cursor:pointer;
@@ -497,10 +517,9 @@ footer p span {
 /* SUMMARY & DETAILS */
 
 details {
-    padding: 10px;
-    width: 70%;
+    width: 40%;
     margin: 0 auto ;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
     border-radius: 4px;
     overflow: hidden;
@@ -537,6 +556,7 @@ details summary {
     background: #ffffff;
     position: relative;
     cursor: pointer;
+    text-align: left;
   }
   
   .summary-content {
@@ -551,7 +571,7 @@ details summary {
   }
 
   .summary-content img {
-    width: 50%;
+    width: 40%;
     border: 3px solid var(--hover);
   }
 
@@ -559,7 +579,7 @@ details summary {
     width: 40%;
   }
 
-  @media only screen and (max-width:1100px) {
+  @media only screen and (max-width:1700px) {
     .summary-content {
         flex-direction: column;
         align-items: center;
@@ -574,7 +594,7 @@ details summary {
       }
   }
 
-  @media only screen and (max-width:768px) {
+  @media only screen and (max-width:1200px) {
     details {
         width: 90%;
     }
@@ -586,7 +606,7 @@ details summary {
 
   summary:before {
     content: '';
-  /* background-image: url(https://raw.githubusercontent.com/microsoft/fluentui-system-icons/master/assets/Chevron%20Right/SVG/ic_fluent_chevron_right_48_filled.svg); */
+    background-image: url(https://raw.githubusercontent.com/microsoft/fluentui-system-icons/master/assets/Chevron%20Right/SVG/ic_fluent_chevron_right_48_filled.svg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -632,7 +652,7 @@ details summary {
     transform-origin: top;
   }
   
-  /* @keyframes accordion {
+  @keyframes accordion {
     from {transform: scaleY(0); opacity: 0;}
     to {transform: scaleY(1); opacity: 1;}
   }
@@ -642,7 +662,7 @@ details summary {
     to {margin-top: -300px;}
   } */
   
-  /* details[open] > p {
+  details[open] > p {
     color: #333333;
     opacity: 0;
     animation-name: accordion-content;
@@ -650,9 +670,9 @@ details summary {
     animation-timing-function: ease-in-out;
     animation-delay: 0.3s;
     animation-fill-mode: forwards;
-  } */
+  }
   
-  /* @keyframes accordion-content {
+   @keyframes accordion-content {
     from {opacity: 0;}
     to {opacity: 1;}
-  } */
+  }
